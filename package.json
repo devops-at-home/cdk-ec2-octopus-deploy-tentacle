@@ -30,13 +30,13 @@
   },
   "author": {
     "name": "DevOps@Home",
-    "email": "76842834+devops-at-home@users.noreply.github.com",
+    "url": "https://devops-at-ho.me",
     "organization": false
   },
   "devDependencies": {
     "@types/jest": "^27",
     "@types/node": "^14",
-    "aws-cdk-lib": "2.1.0",
+    "aws-cdk-lib": "2.43.0",
     "constructs": "10.0.5",
     "jest": "^27",
     "jest-junit": "^13",
@@ -45,6 +45,7 @@
     "jsii-docgen": "^7.0.93",
     "jsii-pacmak": "^1.68.0",
     "npm-check-updates": "^15",
+    "prettier": "^2.7.1",
     "projen": "^0.62.18",
     "standard-version": "^9",
     "ts-jest": "^27",
@@ -52,14 +53,14 @@
     "typescript": "^4.8.3"
   },
   "peerDependencies": {
-    "aws-cdk-lib": "^2.1.0",
+    "aws-cdk-lib": "^2.43.0",
     "constructs": "^10.0.5"
   },
   "keywords": [
     "cdk"
   ],
   "main": "lib/index.js",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "version": "0.0.0",
   "jest": {
     "testMatch": [
