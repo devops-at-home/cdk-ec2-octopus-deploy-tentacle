@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test Snapshot test 1`] = `
+Object {
+  "Parameters": Object {
+    "BootstrapVersion": Object {
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
+      "Type": "AWS::SSM::Parameter::Value<String>",
+    },
+  },
+  "Resources": Object {
+    "Ec2OctopusDeployCfnDocument920D1912": Object {
+      "Properties": Object {
+        "Content": Object {
+          "assumeRole": Object {
+            "Ref": "Ec2OctopusDeployRole3425770F",
+          },
+          "description": "Automation for creating an instance, attaching an SSM role to it, figuring out it's platform type and patching it accordingly",
+          "mainSteps": Array [
+            Object {
+              "action": "aws:waitForAwsResourceProperty",
+              "inputs": Object {
+                "Api": "DescribeInstanceInformation",
+                "DesiredValues": Array [
+                  "Online",
+                ],
+                "Filters": Array [
+                  Object {
+                    "Key": "InstanceIds",
+                    "Values": Array [
+                      "{{create_ec2.InstanceIds}}",
+                    ],
+                  },
+                ],
+                "PropertySelector": "$.InstanceInformationList[0].PingStatus",
+                "Service": "ssm",
+              },
+              "name": "wait_for_ssm_info",
+            },
+            Object {
+              "action": "aws:branch",
+              "inputs": Object {
+                "Choices": Array [
+                  Object {
+                    "NextStep": "InstallConfigureMariaDB",
+                    "StringEquals": "mariadb-server",
+                    "Variable": "{{Application}}",
+                  },
+                  Object {
+                    "NextStep": "InstallConfigureHttpd",
+                    "StringEquals": "httpd",
+                    "Variable": "{{Application}}",
+                  },
+                ],
+                "Default": "InstallConfigureHttpd",
+              },
+              "name": "DeployApplicationByChoice",
+            },
+            Object {
+              "action": "aws:runCommand",
+              "inputs": Object {
+                "DocumentName": "AWS-RunShellScript",
+                "InstanceIds": Array [
+                  "{{create_ec2.InstanceIds}}",
+                ],
+                "Parameters": Object {
+                  "commands": Array [
+                    "yum -y install {{Application}}",
+                    "systemctl enable mariadb; systemctl start mariadb",
+                    "sleep 5",
+                    "aws configure set default.region us-east-1",
+                    "mysqladmin password $(aws ssm get-parameter --name mysql-pass --with-decryption --output text --query 'Parameter.Value')",
+                  ],
+                },
+              },
+              "isEnd": true,
+              "name": "InstallConfigureMariaDB",
+            },
+            Object {
+              "action": "aws:runCommand",
+              "inputs": Object {
+                "DocumentName": "AWS-RunShellScript",
+                "InstanceIds": Array [
+                  "{{create_ec2.InstanceIds}}",
+                ],
+                "Parameters": Object {
+                  "commands": Array [
+                    "yum -y install {{Application}}",
+                    "systemctl enable {{Application}}; systemctl start {{Application}}",
+                  ],
+                },
+              },
+              "isEnd": true,
+              "name": "InstallConfigureHttpd",
+            },
+          ],
+          "parameters": Object {
+            "Application": Object {
+              "allowedValues": Array [
+                "mariadb-server",
+                "httpd",
+              ],
+              "description": "Choose from one of the choices below to install",
+              "type": "String",
+            },
+            "EC2IamRole": Object {
+              "default": "MyEC2SSMRole",
+              "description": "IAM Instance Profile Name, usually is the name of the IAM role",
+              "type": "String",
+            },
+          },
+          "schemaVersion": "0.3",
+        },
+        "DocumentType": "Automation",
+        "Name": "ConfigureOctopusDeploy",
+        "TargetType": "/AWS::EC2::Instance",
+      },
+      "Type": "AWS::SSM::Document",
+    },
+    "Ec2OctopusDeployRole3425770F": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "ssm.amazon.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::Role",
+    },
+  },
+  "Rules": Object {
+    "CheckBootstrapVersion": Object {
+      "Assertions": Array [
+        Object {
+          "Assert": Object {
+            "Fn::Not": Array [
+              Object {
+                "Fn::Contains": Array [
+                  Array [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                  ],
+                  Object {
+                    "Ref": "BootstrapVersion",
+                  },
+                ],
+              },
+            ],
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
+        },
+      ],
+    },
+  },
+}
+`;

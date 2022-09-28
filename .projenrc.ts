@@ -11,7 +11,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     projenrcTs: true,
     repositoryUrl: 'https://github.com/devops-at-home/cdk-ec2-octopus-deploy-tentacle.git',
     license: 'MIT',
-    gitignore: ['.idea', '.DS_Store'],
+    gitignore: ['.idea'],
     prettier: true,
     prettierOptions: {
         settings: {
