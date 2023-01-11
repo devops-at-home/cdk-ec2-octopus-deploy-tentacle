@@ -3299,10 +3299,10 @@ jsii-diff@^1.73.0:
     log4js "^6.7.1"
     yargs "^16.2.0"
 
-jsii-docgen@^7.0.200:
-  version "7.0.200"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.200.tgz#e627f962c02a034c9ae5f91ae2e87c1d075179da"
-  integrity sha512-9C+mdd61iC9tjTTGjLM2VGedPQzrQ6dYn1ViVpmCexUrVVn81hAhIfbHwTwsGeWX3Tmi75e9tJlC/FA/wHfDQA==
+jsii-docgen@^7.0.201:
+  version "7.0.201"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.201.tgz#2dac63c692e9bfed454aa26c22d26700e0d6b886"
+  integrity sha512-3fMJUG8yGmcL5B0E0UBtFvNRVG3HcPHWOBGh/VBc+/8opCR7aW/1W2+Uu56B9YdORwOc3qBEBKBYBFtSAxoBHg==
   dependencies:
     "@jsii/spec" "^1.73.0"
     case "^1.6.3"
@@ -4334,10 +4334,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.66.10:
-  version "0.66.10"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.66.10.tgz#625a4afb2a78967f6a9d7d267dcc309d976a7687"
-  integrity sha512-nLFM+q+ED/RCl0pN+hTg5qJMSz6PQd/M42CMLYHw4pxNnU6YrnTsAZlLth0UmGif0P3T3IYpa6I9gfIsYbJYEA==
+projen@^0.66.11:
+  version "0.66.11"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.66.11.tgz#3174d97912ee9398063cc2695bc020bc47746c21"
+  integrity sha512-U0i6Gw5KIPhHVpycHbmVPB0GseFslF1oUzOww12WmAIwSBA3hAmDDzl2+PF/CQQBKQ5OvCqKPfg18RayRfr+UA==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -4395,9 +4395,9 @@ psl@^1.1.33:
   integrity sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==
 
 punycode@^2.1.0, punycode@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
-  integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.2.0.tgz#2092cc57cd2582c38e4e7e8bb869dc8d3148bc74"
+  integrity sha512-LN6QV1IJ9ZhxWTNdktaPClrNfp8xdSAYS0Zk2ddX7XsXZAxckMHPCBcHRo0cTcEIgYPRiGEkmji3Idkh2yFtYw==
 
 pupa@^3.1.0:
   version "3.1.0"
