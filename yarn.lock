@@ -1357,9 +1357,9 @@ camelcase@^7.0.0:
   integrity sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==
 
 caniuse-lite@^1.0.30001449:
-  version "1.0.30001466"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001466.tgz#c1e6197c540392e09709ecaa9e3e403428c53375"
-  integrity sha512-ewtFBSfWjEmxUgNBSZItFSmVtvk9zkwkl1OfRZlKA8slltRN+/C/tuGVrF9styXkN36Yu3+SeJ1qkXxDEyNZ5w==
+  version "1.0.30001467"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001467.tgz#1afc9c16ed61f50dd87139da87ca43a3e0051c77"
+  integrity sha512-cEdN/5e+RPikvl9AHm4uuLXxeCNq8rFsQ+lPHTfe/OtypP3WwnVVbjn+6uBV7PaFL6xUFzTh+sSCOz1rKhcO+Q==
 
 case@1.6.3, case@^1.6.3:
   version "1.6.3"
@@ -3333,10 +3333,10 @@ jsii-diff@^1.78.1:
     log4js "^6.8.0"
     yargs "^16.2.0"
 
-jsii-docgen@^7.1.28:
-  version "7.1.28"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.1.28.tgz#2f05462e8c7ccfd32f11d3bec285927d481921b5"
-  integrity sha512-XHVxvOH08eOm+gUk3YRrOBFMUIYE2/3s+NHA3R8PWZyArSUDjAMH0pKN7hqYb99dJTf7sfl099EEWhCLozwuEQ==
+jsii-docgen@^7.1.29:
+  version "7.1.29"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.1.29.tgz#a2edf1feddedfc1c56b5673f1b0c6996da4a79af"
+  integrity sha512-arPBruP+LbLfyBCwHItanOtefko1/IazgmHA2Q8P6AEp3jMJvbVtE+Y5LiA4zcZDshCAAThOKmZgqn1axiLdyQ==
   dependencies:
     "@jsii/spec" "^1.78.1"
     case "^1.6.3"
@@ -4389,10 +4389,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.68.6:
-  version "0.68.6"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.68.6.tgz#babf24c124e661a28edd79681ac88e74e3e3aa4a"
-  integrity sha512-mjEKMyONFmgc+qk9rfdKS8WjBNhNCEe2agRqTHDD9qobs3iK45U6mO/gofRiJHdzQxuZy1XrYxD3LzJUcWGdcA==
+projen@^0.68.11:
+  version "0.68.11"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.68.11.tgz#313c0cb724ecd1daef61dbc9099957a55b784b91"
+  integrity sha512-2mzeSmfOs3wmGIGIb87SoXjCyZkIUC0q9weuFOkrRrZ93mS7Fa4YZHl+kHGgVN8fxVDnflR0q/UPspbFTTM/XQ==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
